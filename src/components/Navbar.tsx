@@ -9,15 +9,15 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl transition-all duration-300 border-b border-surface-container-highest/20">
       <div className="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-        <Link to="/" className="text-2xl font-serif italic text-primary">Diane Wolf</Link>
+        <Link to="/#home" className="text-2xl font-serif italic text-primary">Diane Wolf</Link>
         <div className="hidden md:flex items-center gap-8 text-sm">
-          <a 
-            href="#home" 
+          <Link 
+            to="/#home" 
             className={`font-sans tracking-tight ${isHome ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-secondary font-medium hover:text-primary transition-colors duration-300'}`}
           >
             Accueil
-          </a>
-          <a href="#services" className="font-sans tracking-tight text-secondary font-medium hover:text-primary transition-colors duration-300">Consultation</a>
+          </Link>
+          <Link to="/#services" className="font-sans tracking-tight text-secondary font-medium hover:text-primary transition-colors duration-300">Consultation</Link>
           <Link 
             to="/approche" 
             className={`font-sans tracking-tight ${location.pathname === '/approche' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-secondary font-medium hover:text-primary transition-colors duration-300'}`}

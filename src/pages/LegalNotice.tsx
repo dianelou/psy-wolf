@@ -34,8 +34,8 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">2. Hébergement</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans">
               <p>
-                Le site est hébergé par Google Cloud Platform.<br />
-                <strong>Siège social :</strong> 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+                Le site est hébergé par GitHub Inc.<br />
+                <strong>Siège social :</strong> 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.
               </p>
             </div>
           </section>
@@ -53,7 +53,7 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">4. Protection des données personnelles</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans">
               <p>
-                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et d'effacement de vos données personnelles. Vous pouvez exercer ce droit en envoyant un email à : <strong>diane@psy-wolf.fr</strong>. Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de renseignement.
+                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et d'effacement de vos données personnelles. Vous pouvez exercer ce droit en envoyant un email à : <strong><a href="mailto:diane@psy-wolf.fr" className="hover:text-primary transition-colors">diane@psy-wolf.fr</a></strong>. Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de renseignement.
               </p>
             </div>
           </section>

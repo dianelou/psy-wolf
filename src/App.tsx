@@ -11,14 +11,33 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import LegalNotice from './pages/LegalNotice';
 import Approach from './pages/Approach';
+import BookingConfirmation from './pages/BookingConfirmation';
 
-// Scroll to top on route change
+// Scroll to top on route change, but handle hashes
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+    } else {
+      // Small timeout to allow the DOM to render the new page
+      const scrollToHash = () => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      // Try immediately
+      scrollToHash();
+      
+      // Also try after a short delay for page transitions
+      const timer = setTimeout(scrollToHash, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname, hash]);
 
   return null;
 }
@@ -34,6 +53,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/approche" element={<Approach />} />
+          <Route path="/confirmation" element={<BookingConfirmation />} />
         </Routes>
         <Footer />
       </div>

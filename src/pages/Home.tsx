@@ -37,13 +37,18 @@ const Hero = () => (
         <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
           Un espace où parler librement, dans un cadre serein et sans jugement.
           Je vous accompagne avec une approche intégrative adaptée vos besoins.        </p>
-        <div className="flex flex-col sm:flex-row gap-6">
-          <button className="bg-primary text-surface-container-lowest px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-container transition-all shadow-md">
+        <div className="flex flex-col sm:flex-row gap-6 items-center">
+          <a 
+            href="https://tidycal.com/dianewolf/1rdv30"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-surface-container-lowest px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-container transition-all shadow-md w-full sm:w-auto text-center"
+          >
             Réserver un premier échange gratuit
-          </button>
-          <Link to="/approche" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
+          </a>
+          <Link to="/#services" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
             <Play className="fill-secondary group-hover:fill-primary transition-colors" size={24} />
-            Mon approche et parcours
+            Découvrir mes services
           </Link>
         </div>
       </motion.div>
@@ -165,9 +170,14 @@ const ServicesSection = () => (
           <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-xs opacity-60 mb-2">Durée : 20 min</p>
             <span className="text-4xl font-serif block mb-8">Gratuit</span>
-            <button className="w-full py-4 border border-white/20 rounded-[1.25rem] text-surface-container-lowest font-medium hover:bg-white hover:text-secondary transition-all duration-300">
+            <a 
+              href="https://tidycal.com/dianewolf/1rdv30"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full py-4 border border-white/20 rounded-[1.25rem] text-surface-container-lowest font-medium hover:bg-white hover:text-secondary transition-all duration-300 text-center"
+            >
               En savoir plus
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -332,9 +342,14 @@ const PracticalInfoSection = () => (
             Réservez votre créneau directement en ligne ou contactez-moi pour toute question spécifique.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto bg-surface-container-lowest text-[#894C2A] px-10 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-lg font-sans">
+            <a 
+              href="https://tidycal.com/dianewolf/1rdv30"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-surface-container-lowest text-[#894C2A] px-10 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-lg font-sans text-center"
+            >
               Prendre rendez-vous
-            </button>
+            </a>
             <Link to="/contact" className="w-full sm:w-auto border border-white/40 text-surface-container-lowest px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition-all font-sans text-center">
               Me contacter
             </Link>

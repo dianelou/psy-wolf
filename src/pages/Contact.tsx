@@ -129,7 +129,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-primary/60 mb-1">Email</p>
-                    <p className="font-sans font-medium">diane@psy-wolf.fr</p>
+                    <a href="mailto:diane@psy-wolf.fr" className="font-sans font-medium hover:text-primary transition-colors">
+                      diane@psy-wolf.fr
+                    </a>
                   </div>
                 </div>
               </div>

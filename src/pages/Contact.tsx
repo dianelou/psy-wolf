@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   Phone, 
   Mail, 
@@ -7,12 +8,58 @@ import {
   Train,
   Bus,
   Navigation,
-  Globe,
   CheckCircle2,
-  Send
+  Send,
+  Loader2
 } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const isFormValid = formData.name.trim() !== '' && 
+                     formData.email.trim() !== '' && 
+                     formData.email.includes('@') &&
+                     formData.message.trim() !== '';
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isFormValid) return;
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // NOTE: Replace 'YOUR_FORMSPREE_ID' with the real ID from formspree.io
+      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error("Erreur de serveur");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError("Une erreur est survenue lors de l'envoi. Veuillez vérifier votre connexion ou réessayer plus tard.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-24 bg-[#F8F7F3]">
       <div className="max-w-7xl mx-auto px-8">
@@ -38,41 +85,97 @@ const Contact = () => {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white p-10 md:p-14 rounded-[3rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-neutral-100"
+              className="bg-white p-10 md:p-14 rounded-[3rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-neutral-100 relative overflow-hidden"
             >
-              <h2 className="text-3xl font-serif mb-10 text-on-surface">Écrivez-moi</h2>
-              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Nom complet</label>
-                    <input 
-                      type="text" 
-                      placeholder="Votre nom" 
-                      className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Email</label>
-                    <input 
-                      type="email" 
-                      placeholder="votre@email.com" 
-                      className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Message</label>
-                  <textarea 
-                    rows={6}
-                    placeholder="Comment puis-je vous aider ?" 
-                    className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans resize-none"
-                  />
-                </div>
-                <button className="bg-[#894C2A] text-white px-10 py-4 rounded-xl font-bold flex items-center gap-3 hover:bg-[#723E22] transition-all shadow-lg hover:shadow-xl shadow-primary/10">
-                  Envoyer le message
-                  <Send size={18} />
-                </button>
-              </form>
+              <AnimatePresence mode="wait">
+                {isSubmitted ? (
+                  <motion.div 
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.1 }}
+                    className="flex flex-col items-center justify-center py-20 text-center"
+                  >
+                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-8">
+                      <CheckCircle2 className="text-primary" size={44} />
+                    </div>
+                    <h3 className="text-3xl font-serif text-on-surface mb-4">Message envoyé !</h3>
+                    <p className="text-on-surface-variant max-w-sm mx-auto leading-relaxed mb-8">
+                      Merci pour votre message. Je reviendrai vers vous dans les plus brefs délais.
+                    </p>
+                    <button 
+                      onClick={() => setIsSubmitted(false)}
+                      className="text-primary font-bold hover:underline"
+                    >
+                      Envoyer un autre message
+                    </button>
+                  </motion.div>
+                ) : (
+                  <motion.div key="form" exit={{ opacity: 0, scale: 0.95 }}>
+                    <h2 className="text-3xl font-serif mb-10 text-on-surface">Écrivez-moi</h2>
+                    <form className="space-y-8" onSubmit={handleSubmit}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-2">
+                          <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Nom complet</label>
+                          <input 
+                            type="text" 
+                            required
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            placeholder="Votre nom" 
+                            className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Email</label>
+                          <input 
+                            type="email" 
+                            required
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            placeholder="votre@email.com" 
+                            className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans"
+                          />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 ml-1">Message</label>
+                        <textarea 
+                          rows={6}
+                          required
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          placeholder="Comment puis-je vous aider ?" 
+                          className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans resize-none"
+                        />
+                      </div>
+
+                      {error && (
+                        <p className="text-red-500 text-sm italic">{error}</p>
+                      )}
+
+                      <button 
+                        type="submit"
+                        disabled={!isFormValid || isSubmitting}
+                        className={`w-full md:w-auto bg-[#894C2A] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-xl shadow-primary/10
+                          ${!isFormValid || isSubmitting ? 'opacity-50 cursor-not-allowed grayscale' : 'hover:bg-[#723E22]'}`}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            Envoi en cours...
+                            <Loader2 className="animate-spin" size={18} />
+                          </>
+                        ) : (
+                          <>
+                            Envoyer le message
+                            <Send size={18} />
+                          </>
+                        )}
+                      </button>
+                    </form>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
 
             {/* Availability / Reservation Card */}

@@ -36,7 +36,7 @@ const Hero = () => (
         </h1>
         <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
           Un espace où parler librement, dans un cadre serein et sans jugement.
-          Je vous accompagne avec une approche intégrative adaptée vos besoins.        </p>
+          Je vous accompagne avec une approche intégrative adaptée vos besoins.</p>
         <div className="flex flex-col sm:flex-row gap-6 items-center">
           <a 
             href="https://tidycal.com/dianewolf/1rdv30"
@@ -48,7 +48,7 @@ const Hero = () => (
           </a>
           <Link to="/#services" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
             <Play className="fill-secondary group-hover:fill-primary transition-colors" size={24} />
-            Découvrir mes services
+            Mon approche et parcours
           </Link>
         </div>
       </motion.div>

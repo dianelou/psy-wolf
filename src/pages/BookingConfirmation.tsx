@@ -5,11 +5,34 @@ import { CheckCircle2, Calendar, Clock, Mail, ArrowLeft, ExternalLink } from 'lu
 const BookingConfirmation = () => {
   const [searchParams] = useSearchParams();
   
-  const name = searchParams.get('name') || 'Patient';
-  const date = searchParams.get('date');
+  const name = searchParams.get('name') || '';
+  const dateStr = searchParams.get('date');
   const time = searchParams.get('time');
   const type = searchParams.get('type') || 'Consultation';
   const meetingUrl = searchParams.get('meeting_url');
+
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return "À confirmer";
+    
+    try {
+      // TidyCal sends "Tuesday, April 21, 2026"
+      // Date constructor usually handles this, but we capitalize it for French style
+      const date = new Date(dateString);
+      if (isNaN(date.getTime())) return dateString;
+      
+      const formatted = new Intl.DateTimeFormat('fr-FR', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(date);
+
+      // Capitalize first letter
+      return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+    } catch (e) {
+      return dateString;
+    }
+  };
 
   return (
     <main className="min-h-screen pt-32 pb-24 bg-[#F8F7F3]">
@@ -23,12 +46,15 @@ const BookingConfirmation = () => {
             <CheckCircle2 className="text-primary" size={40} />
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-serif text-on-surface mb-6">
-            Merci {name}, votre rendez-vous est confirmé.
+          <h1 className="text-4xl md:text-5xl font-serif text-on-surface mb-4">
+            Merci {name}
           </h1>
           
+          <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
+            Votre RDV {type} est confirmé.
+          </h2>
+          
           <p className="text-lg text-on-surface-variant font-sans leading-relaxed mb-12 max-w-xl mx-auto">
-            Nous avons bien reçu votre demande pour un·e <span className="text-primary font-bold">{type}</span>. 
             Un email de confirmation vient de vous être envoyé.
           </p>
 
@@ -39,7 +65,7 @@ const BookingConfirmation = () => {
                 <span className="font-bold text-sm uppercase tracking-wider">Date</span>
               </div>
               <p className="text-xl font-serif text-on-surface">
-                {date || "À confirmer"}
+                {formatDate(dateStr)}
               </p>
             </div>
             

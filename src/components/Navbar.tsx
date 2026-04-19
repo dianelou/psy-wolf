@@ -12,12 +12,12 @@ const Navbar = () => {
         <Link to="/" className="text-2xl font-serif italic text-primary">Diane Wolf</Link>
         <div className="hidden md:flex items-center gap-8 text-sm">
           <a 
-            href="/#home" 
+            href="#home" 
             className={`font-sans tracking-tight ${isHome ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-secondary font-medium hover:text-primary transition-colors duration-300'}`}
           >
             Accueil
           </a>
-          <a href="/#services" className="font-sans tracking-tight text-secondary font-medium hover:text-primary transition-colors duration-300">Consultation</a>
+          <a href="#services" className="font-sans tracking-tight text-secondary font-medium hover:text-primary transition-colors duration-300">Consultation</a>
           <Link 
             to="/approche" 
             className={`font-sans tracking-tight ${location.pathname === '/approche' ? 'text-primary font-bold border-b-2 border-primary pb-1' : 'text-secondary font-medium hover:text-primary transition-colors duration-300'}`}

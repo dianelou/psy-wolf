@@ -195,7 +195,7 @@ const Contact = () => {
                 Nouveaux patients acceptés. Séances au cabinet ou en téléconsultation sécurisée. <span className="text-primary italic font-medium">Premier échange gratuit.</span>
               </p>
               <a 
-                href="https://tidycal.com/dianewolf" 
+                href="https://rdv.psy-wolf.fr" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block bg-[#894C2A] text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-[#723E22] transition-all shadow-lg hover:shadow-xl shadow-primary/10"

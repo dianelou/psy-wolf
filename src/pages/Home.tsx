@@ -39,7 +39,7 @@ const Hero = () => (
           Je vous accompagne avec une approche intégrative adaptée vos besoins.</p>
         <div className="flex flex-col sm:flex-row gap-6 items-center">
           <a 
-            href="https://tidycal.com/dianewolf/1rdv30"
+            href="https://rdv.psy-wolf.fr/1rdv"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-surface-container-lowest px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-container transition-all shadow-md w-full sm:w-auto text-center"
@@ -144,7 +144,7 @@ const ServicesSection = () => (
               <span className="text-4xl font-serif text-primary">60 €</span>
             </div>
             <a 
-              href="https://tidycal.com/dianewolf/"
+              href="https://rdv.psy-wolf.fr"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary hover:bg-primary-container text-surface-container-lowest px-10 py-5 rounded-[1.25rem] font-bold flex items-center gap-3 transition-all duration-300 shadow-xl shadow-primary/10"
@@ -176,7 +176,7 @@ const ServicesSection = () => (
             <p className="text-xs opacity-60 mb-2">Durée : 20 min</p>
             <span className="text-4xl font-serif block mb-8">Gratuit</span>
             <a 
-              href="https://tidycal.com/dianewolf/1rdv30"
+              href="https://rdv.psy-wolf.fr/1rdv"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block w-full py-4 border border-white/20 rounded-[1.25rem] text-surface-container-lowest font-medium hover:bg-white hover:text-secondary transition-all duration-300 text-center"
@@ -255,23 +255,8 @@ const PracticalInfoSection = () => (
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="rounded-3xl overflow-hidden aspect-video shadow-xl bg-surface-container-highest flex items-center justify-center ring-1 ring-primary/5"
-        >
-          <iframe 
-            src="https://maps.google.com/maps?q=2%20rue%20colette%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            className="w-full h-full border-0 grayscale contrast-[1.1] opacity-90 hover:grayscale-0 transition-all duration-700"
-            allowFullScreen
-            loading="lazy"
-            title="Google Maps Location"
-          />
-        </motion.div>
-        
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
@@ -291,6 +276,21 @@ const PracticalInfoSection = () => (
               </div>
             ))}
           </div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="rounded-3xl overflow-hidden aspect-video shadow-xl bg-surface-container-highest flex items-center justify-center ring-1 ring-primary/5"
+        >
+          <iframe 
+            src="https://maps.google.com/maps?q=2%20rue%20colette%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            className="w-full h-full border-0 grayscale contrast-[1.1] opacity-90 hover:grayscale-0 transition-all duration-700"
+            allowFullScreen
+            loading="lazy"
+            title="Google Maps Location"
+          />
         </motion.div>
       </div>
 
@@ -348,7 +348,7 @@ const PracticalInfoSection = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://tidycal.com/dianewolf"
+              href="https://rdv.psy-wolf.fr"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-surface-container-lowest text-[#894C2A] px-10 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-lg font-sans text-center"
@@ -373,7 +373,7 @@ const Home = () => {
       <PracticalInfoSection />
       
       <motion.a 
-        href="https://tidycal.com/dianewolf"
+        href="https://rdv.psy-wolf.fr"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}

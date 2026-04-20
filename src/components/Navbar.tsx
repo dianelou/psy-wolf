@@ -30,9 +30,14 @@ const Navbar = () => {
           >
             Contact
           </Link>
-          <button className="bg-primary text-surface-container-lowest px-6 py-2.5 rounded-xl font-semibold hover:bg-primary-container transition-all duration-300 shadow-sm font-sans text-sm">
+          <a 
+            href="https://tidycal.com/dianewolf/1rdv30"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-surface-container-lowest px-6 py-2.5 rounded-xl font-semibold hover:bg-primary-container transition-all duration-300 shadow-sm font-sans text-sm text-center"
+          >
             Prendre RDV
-          </button>
+          </a>
         </div>
         <button className="md:hidden text-primary" aria-label="Menu">
           <Menu size={24} />

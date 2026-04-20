@@ -36,8 +36,8 @@ const Contact = () => {
     setError(null);
 
     try {
-      // NOTE: Replace 'YOUR_FORMSPREE_ID' with the real ID from formspree.io
-      const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+      // Formspree ID for diane@psy-wolf.fr
+      const response = await fetch("https://formspree.io/f/myklpvap", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

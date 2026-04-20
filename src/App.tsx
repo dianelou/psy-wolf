@@ -44,7 +44,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router basename="/psy-wolf">
+    <Router basename="/">
       <ScrollToTop />
       <div className="min-h-screen font-sans selection:bg-primary/20 bg-background text-on-surface">
         <Navbar />

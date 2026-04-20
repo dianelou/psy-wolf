@@ -46,7 +46,7 @@ const Hero = () => (
           >
             Réserver un premier échange gratuit
           </a>
-          <Link to="/#services" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
+          <Link to="/approche" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
             <Play className="fill-secondary group-hover:fill-primary transition-colors" size={24} />
             Mon approche et parcours
           </Link>

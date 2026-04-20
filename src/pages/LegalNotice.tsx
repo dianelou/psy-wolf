@@ -20,12 +20,14 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">1. Édition du site</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant space-y-4 leading-relaxed font-sans">
               <p>
-                <strong>Propriétaire :</strong> Diane Wolf<br />
+                <strong>Propriétaire :</strong> Diane Wolf EI<br />
                 <strong>Profession :</strong> Psychologue<br />
                 <strong>Numéro ADELI :</strong> 319340733<br />
-                <strong>Adresse :</strong> 19 Rue de Fenouillet, 31200 Toulouse<br />
+                <strong>Numéro RPPS :</strong> 10009744441<br />
+                <strong>Numéro SIRET :</strong> en cours d'enregistrement<br />
+                <strong>Adresse :</strong> 2 rue colette, 31200 Toulouse<br />
                 <strong>Email :</strong> diane@psy-wolf.fr<br />
-                <strong>Téléphone :</strong> 05 61 00 00 00
+                <strong>Téléphone :</strong> 06 xx xx xx xx
               </p>
             </div>
           </section>

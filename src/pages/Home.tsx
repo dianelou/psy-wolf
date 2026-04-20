@@ -143,10 +143,15 @@ const ServicesSection = () => (
               <p className="text-xs tracking-widest mb-1 opacity-60">Durée : 1h</p>
               <span className="text-4xl font-serif text-primary">60 €</span>
             </div>
-            <button className="bg-primary hover:bg-primary-container text-surface-container-lowest px-10 py-5 rounded-[1.25rem] font-bold flex items-center gap-3 transition-all duration-300 shadow-xl shadow-primary/10">
+            <a 
+              href="https://tidycal.com/dianewolf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary hover:bg-primary-container text-surface-container-lowest px-10 py-5 rounded-[1.25rem] font-bold flex items-center gap-3 transition-all duration-300 shadow-xl shadow-primary/10"
+            >
               Réserver
               <Calendar size={20} />
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -257,7 +262,7 @@ const PracticalInfoSection = () => (
           className="rounded-3xl overflow-hidden aspect-video shadow-xl bg-surface-container-highest flex items-center justify-center ring-1 ring-primary/5"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=19%20rue%20de%20Fenouillet%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=2%20rue%20colette%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 grayscale contrast-[1.1] opacity-90 hover:grayscale-0 transition-all duration-700"
             allowFullScreen
             loading="lazy"
@@ -273,7 +278,7 @@ const PracticalInfoSection = () => (
           <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Minimes</h3>
           <div className="space-y-8">
             {[
-              { icon: MapPin, text: "19 rue de Fenouillet,\n31200 Toulouse" },
+              { icon: MapPin, text: "2 rue colette,\n31200 Toulouse" },
               { icon: Train, text: "Métro Ligne B - Arrêt Barrière de Paris" },
               { icon: Bus, text: "Bus 41, 110 - Arrêt Brieux" },
               { icon: Clock, text: "Lundi au Vendredi : 9h00 - 19h30\nSamedi : 10h00 - 13h00" }
@@ -343,7 +348,7 @@ const PracticalInfoSection = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://tidycal.com/dianewolf/1rdv30"
+              href="https://tidycal.com/dianewolf"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-surface-container-lowest text-[#894C2A] px-10 py-4 rounded-xl font-bold hover:bg-white transition-all shadow-lg font-sans text-center"
@@ -367,13 +372,16 @@ const Home = () => {
       <ServicesSection />
       <PracticalInfoSection />
       
-      <motion.button 
+      <motion.a 
+        href="https://tidycal.com/dianewolf"
+        target="_blank"
+        rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="fixed bottom-8 right-8 z-40 md:hidden bg-primary text-surface-container-lowest w-14 h-14 rounded-full flex items-center justify-center shadow-2xl"
       >
         <Calendar size={24} />
-      </motion.button>
+      </motion.a>
     </main>
   );
 };

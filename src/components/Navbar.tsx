@@ -31,7 +31,7 @@ const Navbar = () => {
             Contact
           </Link>
           <a 
-            href="https://tidycal.com/dianewolf/1rdv30"
+            href="https://tidycal.com/dianewolf/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-surface-container-lowest px-6 py-2.5 rounded-xl font-semibold hover:bg-primary-container transition-all duration-300 shadow-sm font-sans text-sm text-center"

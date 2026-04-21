@@ -14,7 +14,7 @@ const Footer = () => (
       {/* Navigation */}
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
         <Link to="/mentions-legales" className="opacity-80 hover:opacity-100 transition-all">Mentions Légales</Link>
-        <a href="#" className="opacity-80 hover:opacity-100 transition-all">Politique de Confidentialité</a>
+        <Link to="/politique-de-confidentialite" className="opacity-80 hover:opacity-100 transition-all">Politique de Confidentialité</Link>
         <Link to="/contact" className="opacity-80 hover:opacity-100 transition-all">Contact</Link>
       </div>
       

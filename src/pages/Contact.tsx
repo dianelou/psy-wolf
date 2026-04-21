@@ -256,7 +256,7 @@ const Contact = () => {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Adresse</p>
                     <p className="font-sans text-neutral-600 leading-relaxed">
-                      2 rue colette<br />
+                      19 rue de Fenouillet<br />
                       31200 Toulouse
                     </p>
                   </div>
@@ -306,7 +306,7 @@ const Contact = () => {
                   />
                   <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/40 to-transparent">
                     <a 
-                      href="https://www.google.com/maps/dir/?api=1&destination=2+rue+colette+31200+Toulouse"
+                      href="https://www.google.com/maps/dir/?api=1&destination=19+rue+de+Fenouillet+31200+Toulouse"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-neutral-100 transition-all shadow-lg w-fit ml-auto"

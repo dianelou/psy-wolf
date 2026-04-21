@@ -10,8 +10,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import LegalNotice from './pages/LegalNotice';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import Approach from './pages/Approach';
 import BookingConfirmation from './pages/BookingConfirmation';
+import NotFound from './pages/NotFound';
 
 // Scroll to top on route change, but handle hashes
 function ScrollToTop() {
@@ -52,8 +54,10 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
+          <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
           <Route path="/approche" element={<Approach />} />
           <Route path="/confirmation" element={<BookingConfirmation />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

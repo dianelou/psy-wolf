@@ -120,7 +120,7 @@ const ServicesSection = () => (
 
           <h3 className="text-3xl md:text-5xl font-serif mb-6 text-on-surface">Consultation Psychologique</h3>
           <p className="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
-            Vous pouvez venir avec une difficulté précise, un symptôme qui pèse, une période de fragilité, ou simplement l’envie de comprendre ce qui se joue pour vous.
+            Vous pouvez venir avec une difficulté précise, un symptôme qui pèse, dans une période de fragilité, ou simplement l’envie de comprendre ce qui se joue pour vous.
           </p>
 
           <ul className="space-y-4 mb-12 flex-grow">
@@ -263,7 +263,7 @@ const PracticalInfoSection = () => (
           <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Minimes</h3>
           <div className="space-y-8">
             {[
-              { icon: MapPin, text: "2 rue colette,\n31200 Toulouse" },
+              { icon: MapPin, text: "19 rue de Fenouillet,\n31200 Toulouse" },
               { icon: Train, text: "Métro Ligne B - Arrêt Barrière de Paris" },
               { icon: Bus, text: "Bus 41, 110 - Arrêt Brieux" },
               { icon: Clock, text: "Lundi au Vendredi : 9h00 - 19h30\nSamedi : 10h00 - 13h00" }
@@ -285,7 +285,7 @@ const PracticalInfoSection = () => (
           className="rounded-3xl overflow-hidden aspect-video shadow-xl bg-surface-container-highest flex items-center justify-center ring-1 ring-primary/5"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=2%20rue%20colette%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=19%20rue%20de%20Fenouillet%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 grayscale contrast-[1.1] opacity-90 hover:grayscale-0 transition-all duration-700"
             allowFullScreen
             loading="lazy"

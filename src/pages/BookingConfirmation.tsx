@@ -5,11 +5,22 @@ import { CheckCircle2, Calendar, Clock, Mail, ArrowLeft, ExternalLink } from 'lu
 const BookingConfirmation = () => {
   const [searchParams] = useSearchParams();
   
-  const name = searchParams.get('name') || '';
+  // Helper to check if a value looks like a TidyCal placeholder (e.g., {name}, [email])
+  const isPlaceholder = (val: string | null) => {
+    if (!val) return true;
+    return val.startsWith('{') && val.endsWith('}') || val.startsWith('[') && val.endsWith(']');
+  };
+
+  const nameParam = searchParams.get('name');
   const dateStr = searchParams.get('date');
   const time = searchParams.get('time');
-  const type = searchParams.get('type') || 'Consultation';
+  const typeParam = searchParams.get('type');
   const meetingUrl = searchParams.get('meeting_url');
+
+  const name = isPlaceholder(nameParam) ? '' : nameParam;
+  const type = isPlaceholder(typeParam) ? 'Consultation' : typeParam;
+  const displayDate = isPlaceholder(dateStr) ? null : dateStr;
+  const displayTime = isPlaceholder(time) ? null : time;
 
   const formatDate = (dateString: string | null) => {
     if (!dateString) return "À confirmer";
@@ -47,7 +58,7 @@ const BookingConfirmation = () => {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-serif text-on-surface mb-4">
-            Merci {name}
+            {name ? `Merci ${name}` : "Confirmation de rendez-vous"}
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-serif text-primary mb-6">
@@ -65,7 +76,7 @@ const BookingConfirmation = () => {
                 <span className="font-bold text-sm uppercase tracking-wider">Date</span>
               </div>
               <p className="text-xl font-serif text-on-surface">
-                {formatDate(dateStr)}
+                {formatDate(displayDate)}
               </p>
             </div>
             
@@ -75,7 +86,7 @@ const BookingConfirmation = () => {
                 <span className="font-bold text-sm uppercase tracking-wider">Heure</span>
               </div>
               <p className="text-xl font-serif text-on-surface">
-                {time || "À confirmer"}
+                {displayTime || "À confirmer"}
               </p>
             </div>
           </div>

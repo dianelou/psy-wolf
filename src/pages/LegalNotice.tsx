@@ -23,9 +23,9 @@ const LegalNotice = () => {
                 <strong>Propriétaire :</strong> Diane Wolf EI<br />
                 <strong>Profession :</strong> Psychologue<br />
                 <strong>Numéro ADELI :</strong> 319340733<br />
-                <strong>Numéro RPPS :</strong> 10009744441<br />
+                <strong>Numéro RPPS :</strong> <a href="https://annuaire.esante.gouv.fr/pp/detail/10009744441?exeProId=5951695" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30">10009744441</a><br />
                 <strong>Numéro SIRET :</strong> en cours d'enregistrement<br />
-                <strong>Adresse :</strong> 2 rue colette, 31200 Toulouse<br />
+                <strong>Siège social :</strong> 2 rue colette, 31200 Toulouse<br />
                 <strong>Email :</strong> diane@psy-wolf.fr<br />
                 <strong>Téléphone :</strong> 06 xx xx xx xx
               </p>
@@ -33,11 +33,11 @@ const LegalNotice = () => {
           </section>
 
           <section>
-            <h2 className="text-2xl font-serif text-on-surface mb-4">2. Hébergement</h2>
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans">
+            <h2 className="text-2xl font-serif text-on-surface mb-4">2. Hébergement et Services</h2>
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans space-y-4">
               <p>
-                Le site est hébergé par GitHub Inc.<br />
-                <strong>Siège social :</strong> 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.
+                <strong>Hébergeur du site :</strong> GitHub Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.<br />
+                <strong>Gestionnaire de domaine et email :</strong> Infomaniak Network SA, Rue Eugène-Marziano 25, 1227 Les Acacias, Suisse.
               </p>
             </div>
           </section>
@@ -64,7 +64,7 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">5. Cookies</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans">
               <p>
-                Ce site n'utilise que des cookies techniques nécessaires à son bon fonctionnement. Aucune donnée à des fins publicitaires n'est collectée.
+                Ce site n'émet aucun cookie propre à des fins de traçage ou de publicité. Toutefois, des services tiers intégrés (comme Google Maps pour la localisation) ou vers lesquels l'utilisateur est redirigé (comme TidyCal pour la réservation) peuvent utiliser des cookies nécessaires à leur bon fonctionnement. Vous pouvez consulter les politiques de confidentialité respectives de ces services pour plus d'informations.
               </p>
             </div>
           </section>

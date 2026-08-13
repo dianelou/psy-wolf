@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">1. Responsable du traitement</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant leading-relaxed font-sans">
               <p>
-                Le responsable du traitement des données personnelles est Diane Wolf, Psychologue (EI), dont le siège social est situé au 2 rue colette, 31200 Toulouse.
+                Le responsable du traitement des données personnelles est Diane Wolf, Psychologue, sous Contrat d'Appui au Projet d'Entreprise jusqu'au 31/07/2027, SAS Créact’up dont le siège social est situé au 290 avenue Charles de Gaulle 82000 Montauban.
               </p>
             </div>
           </section>

@@ -20,14 +20,16 @@ const LegalNotice = () => {
             <h2 className="text-2xl font-serif text-on-surface mb-4">1. Édition du site</h2>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-neutral-100 text-on-surface-variant space-y-4 leading-relaxed font-sans">
               <p>
-                <strong>Propriétaire :</strong> Diane Wolf EI<br />
+                <strong>Propriétaire :</strong> Diane Wolf<br />
                 <strong>Profession :</strong> Psychologue<br />
                 <strong>Numéro ADELI :</strong> 319340733<br />
                 <strong>Numéro RPPS :</strong> <a href="https://annuaire.esante.gouv.fr/pp/detail/10009744441?exeProId=5951695" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30">10009744441</a><br />
-                <strong>Numéro SIRET :</strong> en cours d'enregistrement<br />
-                <strong>Siège social :</strong> 2 rue colette, 31200 Toulouse<br />
                 <strong>Email :</strong> diane@psy-wolf.fr<br />
                 <strong>Téléphone :</strong> 06 xx xx xx xx
+                <i>Sous contrat d'Appui au Projet d'Entreprise jusqu'au 31/07/2027<br />
+                <strong>SAS Créact'up</strong>
+                <strong>Siège social :</strong> 290 avenue Charles de Gaulle 82000 Montauban<br />
+                <strong>Numéro SIRET :</strong>438460339001066 - <strong>Code APE :</strong> 7022Z</i><br />
               </p>
             </div>
           </section>

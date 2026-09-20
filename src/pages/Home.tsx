@@ -141,7 +141,7 @@ const ServicesSection = () => (
           <div className="pt-8 border-t border-primary/5 flex flex-wrap justify-between items-end gap-6">
             <div>
               <p className="text-xs tracking-widest mb-1 opacity-60">Durée : 1h</p>
-              <span className="text-4xl font-serif text-primary">60 €</span>
+              <span className="text-4xl font-serif text-primary">50 €</span>
             </div>
             <a 
               href="https://rdv.psy-wolf.fr"

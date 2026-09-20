@@ -25,7 +25,7 @@ const LegalNotice = () => {
                 <strong>Numéro ADELI :</strong> 319340733<br />
                 <strong>Numéro RPPS :</strong> <a href="https://annuaire.esante.gouv.fr/pp/detail/10009744441?exeProId=5951695" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30">10009744441</a><br />
                 <strong>Email :</strong> diane@psy-wolf.fr<br />
-                <strong>Téléphone :</strong> 06 xx xx xx xx<br /><br />
+                <strong>Téléphone :</strong> 07 67 44 23 48<br /><br />
                 <i>Sous contrat d'Appui au Projet d'Entreprise jusqu'au 31/07/2027<br />
                 <strong>SAS Créact'up</strong><br />
                 <strong>Siège social :</strong> 290 avenue Charles de Gaulle 82000 Montauban<br />

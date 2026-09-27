@@ -328,7 +328,7 @@ const Contact = () => {
                     <House size={22} className="text-primary shrink-0" />
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Condition</p>
-                      <p className="font-sans text-neutral-600 text-sm font-medium leading-relaxed">
+                      <p className="font-sans text-neutral-600 text-sm">
                         Visite à domicile pour les personnes rencontrant des difficultés de mobilité et d'accès aux outils numériques.
                       </p>
                     </div>
@@ -339,8 +339,8 @@ const Contact = () => {
                     <Radar size={22} className="text-primary shrink-0" />
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Secteur d'intervention</p>
-                      <p className="font-sans text-neutral-600 text-sm font-medium leading-relaxed">
-                        10 minutes à vélo ou en transports en commun autour du métro La Vache (Borderouge, Barrière de Paris, Minimes, Izards, etc.)
+                      <p className="font-sans text-neutral-600 text-sm">
+                        10 minutes à vélo ou en transports en commun autour du métro La Vache </br>Borderouge, Barrière de Paris, Minimes, Izards, etc.
                       </p>
                     </div>
                   </div>

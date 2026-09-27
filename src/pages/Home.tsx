@@ -127,7 +127,7 @@ const ServicesSection = () => (
             {[
               "Séance individuelle pour adulte en toute confidentialité",
               "Approche adaptée à vos besoins",
-              "En cabinet ou en visio"
+              "En cabinet, à domicile ou en visio"
             ].map((text, i) => (
               <li key={i} className="flex items-center gap-3 text-on-surface/80">
                 <div className="w-5 h-5 rounded-full border border-primary/20 flex items-center justify-center shrink-0">
@@ -141,7 +141,7 @@ const ServicesSection = () => (
           <div className="pt-8 border-t border-primary/5 flex flex-wrap justify-between items-end gap-6">
             <div>
               <p className="text-xs tracking-widest mb-1 opacity-60">Durée : 45 min</p>
-              <span className="text-4xl font-serif text-primary">50 €</span>
+              <span className="text-4xl font-serif text-primary">60 €</span>
             </div>
             <a 
               href="https://rdv.psy-wolf.fr"
@@ -263,10 +263,10 @@ const PracticalInfoSection = () => (
           <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Minimes</h3>
           <div className="space-y-8">
             {[
-              { icon: MapPin, text: "19 rue de Fenouillet,\n31200 Toulouse" },
-              { icon: Train, text: "Métro Ligne B - Arrêt Barrière de Paris" },
-              { icon: Bus, text: "Bus 41, 110 - Arrêt Brieux" },
-              { icon: Clock, text: "Lundi au Vendredi : 9h00 - 19h30\nSamedi : 10h00 - 13h00" }
+              { icon: MapPin, text: "2 rue Ernest Renan,\n31200 Toulouse" },
+              { icon: Train, text: "Métro Ligne B - Arrêt Trois Cocus (15 minutes à pied" },
+              { icon: Bus, text: "Bus 41 - Arrêt Pradet, Bus L12 - Arrêt Louin" },
+              { icon: Clock, text: "Jeudi : 9h00 - 19h\nSamedi : 10h00 - 18h00" }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <item.icon className="text-primary mt-1 shrink-0" size={24} />
@@ -285,11 +285,11 @@ const PracticalInfoSection = () => (
           className="rounded-3xl overflow-hidden aspect-video shadow-xl bg-surface-container-highest flex items-center justify-center ring-1 ring-primary/5"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=19%20rue%20de%20Fenouillet%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=2%20rue%20Ernest%20Renan%2C%2031200%20Toulouse&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="w-full h-full border-0 grayscale contrast-[1.1] opacity-90 hover:grayscale-0 transition-all duration-700"
             allowFullScreen
             loading="lazy"
-            title="Google Maps Location"
+            title="Localisation Cabinet - 2 rue Ernest Renan Toulouse"
           />
         </motion.div>
       </div>

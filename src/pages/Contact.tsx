@@ -340,7 +340,8 @@ const Contact = () => {
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Secteur d'intervention</p>
                       <p className="font-sans text-neutral-600 text-sm">
-                        10 minutes à vélo ou en transports en commun autour du métro La Vache </br>Borderouge, Barrière de Paris, Minimes, Izards, etc.
+                        10 minutes à vélo ou en transports en commun autour du métro La Vache<br />
+                        Borderouge, Barrière de Paris, Minimes, Izards, etc.
                       </p>
                     </div>
                   </div>

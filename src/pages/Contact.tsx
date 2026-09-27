@@ -10,7 +10,9 @@ import {
   Navigation,
   CheckCircle2,
   Send,
-  Loader2
+  Loader2,
+  House,
+  Radar
 } from 'lucide-react';
 
 const Contact = () => {
@@ -122,7 +124,7 @@ const Contact = () => {
                             required
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            placeholder="Votre nom" 
+                            placeholder="Vos nom et prénom" 
                             className="w-full bg-[#F3F2EE] border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all font-sans"
                           />
                         </div>
@@ -192,7 +194,7 @@ const Contact = () => {
                 </span>
               </div>
               <p className="text-on-surface-variant text-lg leading-relaxed mb-10">
-                Nouveaux patients acceptés. Séances au cabinet ou en téléconsultation sécurisée. <span className="text-primary italic font-medium">Premier échange gratuit.</span>
+                Nouveaux patients acceptés. Séances au cabinet, à domicile ou en téléconsultation sécurisée. <span className="text-primary italic font-medium">Premier échange gratuit.</span>
               </p>
               <a 
                 href="https://rdv.psy-wolf.fr" 
@@ -256,7 +258,7 @@ const Contact = () => {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Adresse</p>
                     <p className="font-sans text-neutral-600 leading-relaxed">
-                      19 rue de Fenouillet<br />
+                      2 rue Ernest Renan<br />
                       31200 Toulouse
                     </p>
                   </div>
@@ -268,8 +270,8 @@ const Contact = () => {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Horaires</p>
                     <p className="font-sans text-neutral-600 leading-relaxed">
-                      Lun - Ven : 09:00 — 19:00<br />
-                      Samedi : 09:00 — 12:00
+                      Jeudi : 09:00 — 19:00<br />
+                      Samedi : 10:00 — 18:00
                     </p>
                   </div>
                 </div>
@@ -281,7 +283,7 @@ const Contact = () => {
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Accès Métro</p>
                       <p className="font-sans text-neutral-600 text-sm">
-                        Métro Ligne B - Arrêt Barrière de Paris
+                        Métro Ligne B - Arrêt Trois Cocus (à 15 minutes à pied)
                       </p>
                     </div>
                   </div>
@@ -290,7 +292,7 @@ const Contact = () => {
                     <div>
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Accès Bus</p>
                       <p className="font-sans text-neutral-600 text-sm">
-                        Bus 41, 110 - Arrêt Brieux
+                        Bus 41 - Arrêt Pradet, Bus L12 - Arrêt Louin
                       </p>
                     </div>
                   </div>
@@ -306,7 +308,7 @@ const Contact = () => {
                   />
                   <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/40 to-transparent">
                     <a 
-                      href="https://www.google.com/maps/dir/?api=1&destination=19+rue+de+Fenouillet+31200+Toulouse"
+                      href="https://www.google.com/maps/dir/?api=1&destination=2+rue+Ernest+Renan+31200+Toulouse"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-neutral-100 transition-all shadow-lg w-fit ml-auto"
@@ -316,6 +318,34 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
+
+                {/* Consultation à domicile & Secteur d'intervention */}
+                <div className="pt-8 border-t border-neutral-100 space-y-6">
+
+                <h3 className="text-xl font-serif mb-8">Consultation à Domicile</h3>
+                  {/* Consultation à domicile */}
+                  <div className="flex gap-4 items-start">
+                    <House size={22} className="text-primary shrink-0" />
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Condition</p>
+                      <p className="font-sans text-neutral-600 text-sm font-medium leading-relaxed">
+                        Visite à domicile pour les personnes rencontrant des difficultés de mobilité et d'accès aux outils numériques.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Secteur d'intervention */}
+                  <div className="flex gap-4 items-start">
+                    <Radar size={22} className="text-primary shrink-0" />
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Secteur d'intervention</p>
+                      <p className="font-sans text-neutral-600 text-sm font-medium leading-relaxed">
+                        10 minutes à vélo ou en transports en commun autour du métro La Vache (Borderouge, Barrière de Paris, Minimes, Izards, etc.)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </motion.div>
           </div>

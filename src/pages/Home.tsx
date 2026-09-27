@@ -260,11 +260,11 @@ const PracticalInfoSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Minimes</h3>
+          <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Nord</h3>
           <div className="space-y-8">
             {[
               { icon: MapPin, text: "2 rue Ernest Renan,\n31200 Toulouse" },
-              { icon: Train, text: "Métro Ligne B - Arrêt Trois Cocus (15 minutes à pied" },
+              { icon: Train, text: "Métro Ligne B - Arrêt Trois Cocus (15 minutes à pied)" },
               { icon: Bus, text: "Bus 41 - Arrêt Pradet, Bus L12 - Arrêt Louin" },
               { icon: Clock, text: "Jeudi : 9h00 - 19h\nSamedi : 10h00 - 18h00" }
             ].map((item, i) => (

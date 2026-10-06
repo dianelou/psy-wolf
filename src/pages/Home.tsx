@@ -36,7 +36,7 @@ const Hero = () => (
         </h1>
         <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
           Un espace où parler librement, dans un cadre serein et sans jugement.
-          Je vous accompagne avec une approche intégrative adaptée vos besoins.</p>
+          Je vous accompagne avec une approche intégrative adaptée à vos besoins.</p>
         <div className="flex flex-col sm:flex-row gap-6 items-center">
           <a 
             href="https://rdv.psy-wolf.fr/1rdv"

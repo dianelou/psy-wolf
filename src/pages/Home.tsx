@@ -120,7 +120,7 @@ const ServicesSection = () => (
 
           <h3 className="text-3xl md:text-5xl font-serif mb-6 text-on-surface">Consultation Psychologique</h3>
           <p className="text-on-surface-variant text-lg leading-relaxed mb-8 max-w-xl">
-            Vous pouvez venir avec une difficulté précise, un symptôme qui pèse, dans une période de fragilité, ou simplement l’envie de comprendre ce qui se joue pour vous.
+            Vous pouvez venir avec une difficulté précise, un symptôme qui vous pèse, une période de fragilité, ou simplement le besoin de comprendre ce qui se joue pour vous.
           </p>
 
           <ul className="space-y-4 mb-12 flex-grow">

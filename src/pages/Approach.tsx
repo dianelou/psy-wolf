@@ -1,254 +1,344 @@
+import React from 'react';
 import { motion } from 'motion/react';
-import { ShieldCheck, GraduationCap, Briefcase, Heart, BookOpen, Quote, Download } from 'lucide-react';
-
-import { Hammer, ArrowLeft } from 'lucide-react';
+import { 
+  GraduationCap, 
+  Building2, 
+  Briefcase,
+  ShieldCheck, 
+  Download, 
+  Calendar, 
+  User, 
+  ArrowRight, 
+  Camera,
+  Stethoscope,
+  Brain,
+  HeartHandshake,
+  Sparkles,
+  Award
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Approach = () => {
-  const isUnderConstruction = true;
-
-  if (isUnderConstruction) {
-    return (
-      <main className="min-h-screen flex items-center justify-center bg-[#F8F7F3] px-8">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-md w-full text-center"
-        >
-          <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
-            <Hammer className="text-primary" size={40} />
-          </div>
-          <h1 className="text-4xl font-serif text-on-surface mb-6">Page en construction</h1>
-          <p className="text-on-surface-variant font-sans leading-relaxed mb-10">
-            Cette page est en cours de rédaction pour vous offrir une présentation détaillée de ma pratique. Merci de votre patience.
-          </p>
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all duration-300 group"
-          >
-            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-            Retour à l'accueil
-          </Link>
-        </motion.div>
-      </main>
-    );
-  }
-
+const Approach: React.FC = () => {
   return (
-    <main className="min-h-screen pt-32 pb-24 bg-[#F8F7F3]">
-      <div className="max-w-7xl mx-auto px-8">
-        
-        {/* Hero Section - The Posture */}
-        <section className="mb-24">
+    <main className="min-h-screen bg-background">
+      
+      {/* 1. Header / Présentation Diane Wolf (Conservée comme validée par l'utilisatrice) */}
+      <section className="pt-32 pb-20 max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Colonne gauche : Titre et texte de présentation */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            transition={{ duration: 0.8 }}
+            className="lg:col-span-7"
           >
-            <div>
-              <span className="inline-block text-primary uppercase tracking-[0.2em] font-bold text-xs mb-4">
-                Ma Posture
-              </span>
-              <h1 className="text-5xl md:text-7xl font-serif text-on-surface mb-8 leading-tight">
-                Une écoute <span className="italic font-normal text-primary">active</span> et une présence engagée.
-              </h1>
-              <div className="space-y-6 text-lg text-on-surface-variant leading-relaxed font-sans">
-                <p>
-                  Ma pratique s'enracine dans une approche intégrative, alliant la rigueur de la psychologie clinique à des outils concrets issus des thérapies cognitives et comportementales (TCC).
-                </p>
-                <p>
-                  Je conçois la thérapie comme une collaboration où l'authenticité et la bienveillance créent l'espace nécessaire au changement. Mon rôle est de vous accompagner dans la compréhension de vos mécanismes internes, tout en vous aidant à mobiliser vos propres ressources.
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
-                <img 
-                  src="https://picsum.photos/seed/psychology/800/1000" 
-                  alt="Postue thérapeutique" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-              <div className="absolute top-1/2 -left-12 -translate-y-1/2 z-20 hidden lg:block">
-                <div className="bg-white p-8 rounded-3xl shadow-xl max-w-xs border border-neutral-100">
-                  <Quote className="text-primary/20 mb-4" size={40} />
-                  <p className="font-serif italic text-lg leading-relaxed text-on-surface">
-                    "Accompagner, c'est marcher à côté de l'autre tout en respectant son propre rythme."
-                  </p>
-                </div>
-              </div>
+            <span className="inline-block text-primary uppercase tracking-[0.2em] font-bold text-xs mb-4">
+              Approche & Parcours
+            </span>
+            <h1 className="text-5xl md:text-7xl font-serif text-on-surface mb-4 leading-tight -tracking-[0.02em]">
+              Diane Wolf
+            </h1>
+            <p className="text-xl md:text-2xl text-primary font-serif italic mb-6">
+              Psychologue clinicienne • gérontologie, neuropsychologie
+            </p>
+            
+            <p className="text-on-surface-variant font-sans text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-light">
+              Formée à une approche intégrative et bienveillante, j'accompagne les adultes, les personnes âgées ainsi que leurs proches aidants face aux transitions de vie, vulnérabilités et questionnements singuliers.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://rdv.psy-wolf.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary hover:bg-primary-container text-surface-container-lowest px-8 py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/10 text-center"
+              >
+                <Calendar size={18} />
+                Prendre rendez-vous
+              </a>
+              <Link 
+                to="/contact" 
+                className="border border-primary/30 text-on-surface hover:text-primary hover:border-primary px-8 py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center gap-2 text-center"
+              >
+                Me contacter
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </motion.div>
-        </section>
 
-        {/* Core Principles Section */}
-        <section className="mb-32">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: "Humanisme & CNV",
-                desc: "Formée à la Communication Non Violente (CNV), je privilégie un lien thérapeutique basé sur l'empathie profonde et le respect de l'intégrité de chacun."
-              },
-              {
-                icon: BookOpen,
-                title: "Mindfulness (MBCT)",
-                desc: "J'intègre la méditation de pleine conscience (cycle MBCT) comme outil de régulation émotionnelle pour apprivoiser l'anxiété et les cycles dépressifs."
-              },
-              {
-                icon: ShieldCheck,
-                title: "Éthique rigoureuse",
-                desc: "Ma pratique est strictement encadrée par le code de déontologie des psychologues, garantissant secret professionnel et respect des droits de la personne."
-              }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.02)] border border-neutral-100"
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                  <item.icon className="text-primary" size={24} />
-                </div>
-                <h3 className="text-xl font-bold mb-4 font-serif">{item.title}</h3>
-                <p className="text-on-surface-variant leading-relaxed font-sans text-sm">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Full Journey Section */}
-        <section className="mb-32">
-          <div className="mb-16">
-            <h2 className="text-4xl font-serif mb-6">Mon Parcours</h2>
-            <div className="w-24 h-1 bg-primary/20 rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-            {/* Education & Internships */}
-            <div className="space-y-12">
-              <div className="flex gap-6 items-start">
-                <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-neutral-100 flex items-center justify-center shrink-0">
-                  <GraduationCap className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-4 font-serif">Formation Académique</h3>
-                  <div className="space-y-8">
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-widest text-primary mb-2">Master 2 Psychologie Clinique</h4>
-                      <p className="text-on-surface font-medium mb-1">Université Toulouse - Jean Jaurès (2015 – 2022)</p>
-                      <p className="text-on-surface-variant text-sm leading-relaxed">
-                        Spécialisation en Psychopathologie, Psychologie de la Santé et Gérontologie Clinique. Mon travail de recherche s'est porté sur l'efficacité des TCC dans le traitement de l'insomnie chronique en institution.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+          {/* Colonne droite : Cadre Photo de profil */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="lg:col-span-5 relative"
+          >
+            <div className="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-xl bg-surface-container-low ring-1 ring-primary/5 flex flex-col items-center justify-center p-8 text-center">
+              <div className="w-28 h-28 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center mb-5 text-primary">
+                <User size={52} className="text-primary/70" />
               </div>
-
-              <div className="flex gap-6 items-start">
-                <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-neutral-100 flex items-center justify-center shrink-0">
-                  <Heart className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-4 font-serif">Expériences Cliniques</h3>
-                  <div className="space-y-6">
-                    <div className="bg-white/50 p-6 rounded-2xl border border-neutral-100 italic font-sans text-on-surface-variant text-sm">
-                      "Mon parcours clinique m'a permis d'intervenir au sein du CHU de Toulouse auprès de services spécialisés (Psychiatrie, Neurologie, Centre Expert Parkinson), ainsi qu'en milieu gériatrique (EHPAD, PASA)."
-                    </div>
-                    <ul className="space-y-4 text-sm text-on-surface-variant list-disc pl-5 font-sans">
-                      <li>Évaluation psychologique et soutien à l'annonce (Unité Mobile de Psychiatrie, Parkinson).</li>
-                      <li>Éducation thérapeutique et bilans neuropsychologiques.</li>
-                      <li>Animation de groupes (PASA & UVP) et soutien aux aidants.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-6 items-start">
-                <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-neutral-100 flex items-center justify-center shrink-0">
-                  <BookOpen className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-4 font-serif">Formations Complémentaires</h3>
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-widest text-primary mb-3">Pratique Cycle MBCT</h4>
-                      <p className="text-on-surface-variant text-sm leading-relaxed mb-4">
-                        Suivi du programme de Thérapie Cognitive Basée sur la Pleine Conscience (MBCT) pour la prévention des rechutes dépressives et la gestion du stress.
-                      </p>
-                    </div>
-                    <div className="pt-4 border-t border-neutral-100">
-                      <h4 className="font-bold text-sm uppercase tracking-widest text-primary mb-3">Formation en ligne</h4>
-                      <ul className="space-y-3 text-sm text-on-surface-variant list-disc pl-5 font-sans">
-                        <li>La maladie de Parkinson</li>
-                        <li>Cancer chez les personnes âgées : mieux comprendre ses spécificité pour mieux prendre en soins</li>
-                        <li>Traumatisme psychique chronique et deuil compliqué</li>
-                        <li>Les conduites suicidaires : identifier et prévenir</li>
-                        <li>La santé sexuelle pour tous</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+              <h3 className="font-serif text-2xl text-on-surface font-semibold mb-1">
+                Diane Wolf
+              </h3>
+              <p className="text-xs uppercase tracking-widest text-primary font-bold mb-5">
+                Psychologue clinicienne
+              </p>
+              <div className="text-xs text-neutral-600 font-sans leading-relaxed bg-surface-container-lowest/90 backdrop-blur-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-primary/10 shadow-sm">
+                <Camera size={15} className="shrink-0 text-primary" />
+                Espace réservé pour votre photo de profil
               </div>
             </div>
 
-            {/* Professional & Commitments */}
-            <div className="space-y-12 text-on-surface-variant">
-              <div className="flex gap-6 items-start">
-                <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-neutral-100 flex items-center justify-center shrink-0">
-                  <Briefcase className="text-primary" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-4 font-serif">Engagement Professionnel</h3>
-                  <div className="space-y-8">
-                    <div>
-                      <h4 className="font-bold text-sm uppercase tracking-widest text-primary mb-2">INSA Toulouse</h4>
-                      <p className="text-on-surface font-medium mb-1">Coach étudiants & Vacataire d'enseignement (Depuis 2013)</p>
-                      <p className="text-on-surface-variant text-sm leading-relaxed mb-4">
-                        Accompagnement d'élèves-ingénieurs dans le cadre du Parcours Professionnel Individualisé (PPI).
-                      </p>
-                      <p className="text-on-surface-variant text-sm leading-relaxed">
-                        Ce projet vise à soutenir la construction du projet professionnel et le développement de compétences humaines durables dans une perspective globale et épanouissante.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            {/* Macaron citation */}
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute -bottom-6 -left-6 bg-secondary text-surface-container-lowest p-6 rounded-2xl max-w-[260px] -rotate-2 shadow-xl hidden sm:block"
+            >
+              <Sparkles className="text-2xl mb-2 text-surface-container-lowest" />
+              <p className="text-xs font-medium leading-relaxed italic opacity-95">
+                "Une écoute attentive et bienveillante, au cabinet, à domicile ou en visio."
+              </p>
+            </motion.div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* 2. Section Ma Formation & Mon Parcours Professionnel en 2 Colonnes */}
+      {/* Fond subtilement contrasté bg-surface-container-low identique à la section "Mon Accompagnement" de l'accueil */}
+      <section className="bg-surface-container-low py-24">
+        <div className="max-w-7xl mx-auto px-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+            
+            {/* ======================================================== */}
+            {/* COLONNE GAUCHE : MA FORMATION (Cadre style Consultation)  */}
+            {/* ======================================================== */}
+            <motion.div 
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(74,100,83,0.06)] ring-1 ring-secondary/15 flex flex-col relative overflow-hidden h-full"
+            >
+              {/* Filigrane discret en arrière-plan */}
+              <div className="absolute top-10 right-10 text-secondary/10 pointer-events-none">
+                <GraduationCap size={90} className="opacity-20" />
               </div>
 
-              {/* Deontology Highlight */}
-              <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="bg-[#4E6157] text-white p-10 rounded-[2.5rem] shadow-xl relative overflow-hidden"
-              >
-                <div className="relative z-10">
-                  <ShieldCheck className="mb-6 opacity-40" size={48} />
-                  <h3 className="text-2xl font-serif mb-4">Code de Déontologie</h3>
-                  <p className="text-sm opacity-80 leading-relaxed mb-8">
-                    En tant que psychologue, je m'engage à respecter les principes de respect des droits de la personne, de compétence, de responsabilité et de probité.
+              <h2 className="text-3xl md:text-4xl font-serif mb-6 text-on-surface">
+                Ma formation
+              </h2>
+
+              <div className="h-1 w-10 rounded-full bg-secondary mb-8" />
+
+              {/* Sous-section 1 : Diplôme d'état */}
+              <div className="mb-10">
+                <div className="flex items-center gap-2 mb-4">
+                  <Award className="text-secondary shrink-0" size={18} />
+                  <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+                    Diplôme
+                  </span>
+                </div>
+
+                <div className="border-l-2 border-secondary/30 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Master 2 Psychologie gérontologique clinique
+                  </h3>
+                  <p className="text-sm font-medium text-secondary">
+                    Université Toulouse – Jean Jaurès · 2022
                   </p>
-                  <a 
-                    href="https://ffpp.net//wp-content/uploads/2021/10/Code_deontologie_psychologue_9-09-2021_VF.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-white text-[#4E6157] px-8 py-4 rounded-xl font-bold text-sm hover:bg-neutral-100 transition-all shadow-lg"
-                  >
-                    Consulter le code PDF
-                    <Download size={18} />
-                  </a>
                 </div>
-                <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
-              </motion.div>
-            </div>
-          </div>
-        </section>
+              </div>
 
-      </div>
+              {/* Sous-section 2 : Stages cliniques */}
+              <div className="flex-grow">
+                <div className="flex items-center gap-2 mb-6">
+                  <Stethoscope className="text-secondary shrink-0" size={18} />
+                  <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+                    Stages cliniques
+                  </span>
+                </div>
+
+                <div className="space-y-6">
+                  {/* CHU de Toulouse */}
+                  <div className="border-l-2 border-secondary/30 pl-4 py-0.5">
+                    <h4 className="font-serif font-bold text-lg text-on-surface mb-1">
+                      CHU de Toulouse
+                    </h4>
+                    <p className="text-sm font-medium text-secondary mb-1">
+                      Neurologie · Centre Expert Parkinson · Psychiatrie du sujet âgé
+                    </p>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Évaluation, éducation thérapeutique et soutien psychologique.
+                    </p>
+                  </div>
+
+                  {/* EHPAD Françoise de Veyrinas – Toulouse */}
+                  <div className="border-l-2 border-secondary/30 pl-4 py-0.5">
+                    <h4 className="font-serif font-bold text-lg text-on-surface mb-1">
+                      EHPAD Françoise de Veyrinas – Toulouse
+                    </h4>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Accompagnement psychologique de personnes âgées et de leurs proches.
+                    </p>
+                  </div>
+
+                  {/* Clinique des Minimes – Toulouse */}
+                  <div className="border-l-2 border-secondary/30 pl-4 py-0.5">
+                    <h4 className="font-serif font-bold text-lg text-on-surface mb-1">
+                      Clinique des Minimes – Toulouse
+                    </h4>
+                    <p className="text-sm font-medium text-secondary mb-1">
+                      Neuropsychologie · SSR gériatrique
+                    </p>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Évaluation et accompagnement des difficultés cognitives.
+                    </p>
+                  </div>
+
+                  {/* Centre hospitalier de Muret */}
+                  <div className="border-l-2 border-secondary/30 pl-4 py-0.5">
+                    <h4 className="font-serif font-bold text-lg text-on-surface mb-1">
+                      Centre hospitalier de Muret
+                    </h4>
+                    <p className="text-sm font-medium text-secondary mb-1">
+                      Consultation mémoire
+                    </p>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Évaluation et accompagnement des difficultés cognitives.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </motion.div>
+
+            {/* ======================================================== */}
+            {/* COLONNE DROITE : MON PARCOURS PROFESSIONNEL               */}
+            {/* ======================================================== */}
+            <motion.div 
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(137,76,42,0.06)] ring-1 ring-primary/5 flex flex-col relative overflow-hidden h-full"
+            >
+              {/* Filigrane discret en arrière-plan */}
+              <div className="absolute top-10 right-10 text-primary/10 pointer-events-none">
+                <Briefcase size={90} className="opacity-20" />
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-serif mb-6 text-on-surface">
+                Mon parcours professionnel
+              </h2>
+
+              <div className="h-1 w-10 rounded-full bg-primary mb-8" />
+
+              {/* Liste des expériences professionnelles */}
+              <div className="space-y-6 flex-grow">
+                
+                {/* 1. Psychologue clinicienne */}
+                <div className="border-l-2 border-primary/20 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Psychologue en Cabinet
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    Cabinet de psychologie · Depuis septembre 2026
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Accompagnement psychologique individuel d’adultes, en cabinet, à domicile et en téléconsultation.
+                  </p>
+                </div>
+
+                {/* 2. Psychologue en EHPAD */}
+                <div className="border-l-2 border-primary/20 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Psychologue en EHPAD
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    DomusVi – Toulouse · Depuis juin 2026
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Accompagnement psychologique des résidents et de leurs proches, soutien des équipes et accompagnement des problématiques liées au vieillissement.
+                  </p>
+                </div>
+
+                {/* 3. Vacataire d’accompagnement des étudiants */}
+                <div className="border-l-2 border-primary/20 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Vacataire d’accompagnement des étudiants
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    INSA Toulouse · Depuis 2024
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed mb-2">
+                    Accompagnements individuels : entretien, clarification de la demande et des objectifs, suivi.
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    <span className="font-semibold text-primary">Thèmes :</span> orientation, connaissance de soi, gestion du stress et confiance en soi.
+                  </p>
+                </div>
+
+                {/* 4. Vacataire d’enseignement · Projet professionnel individualisé */}
+                <div className="border-l-2 border-primary/20 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Vacataire d’enseignement · Projet professionnel individualisé
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    INSA Toulouse · Depuis 2013
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Accompagnement des élèves-ingénieurs dans la construction de leur projet professionnel et le développement de leurs compétences.
+                  </p>
+                </div>
+
+              </div>
+
+            </motion.div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. Cadre Déontologique */}
+      <section className="bg-background pb-24 pt-12 md:pt-16">
+        <div className="max-w-7xl mx-auto px-8">
+          
+          {/* Bloc Déontologique (Teinte verte douce secondaire) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-secondary text-surface-container-lowest p-10 md:p-14 rounded-[2.5rem] shadow-xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+          >
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <ShieldCheck className="opacity-90" size={32} />
+                <h3 className="text-2xl md:text-3xl font-serif">Cadre Déontologique</h3>
+              </div>
+              <p className="text-sm md:text-base opacity-90 leading-relaxed font-sans">
+                En tant que psychologue, ma pratique est encadrée par le Code de Déontologie des Psychologues, garantissant le respect absolu des droits de la personne, le secret professionnel et une probité rigoureuse.
+              </p>
+            </div>
+            <a 
+              href="https://ffpp.net//wp-content/uploads/2021/10/Code_deontologie_psychologue_9-09-2021_VF.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white text-secondary px-8 py-4 rounded-xl font-bold text-sm hover:bg-neutral-100 transition-all shadow-md shrink-0"
+            >
+              Consulter le Code (PDF)
+              <Download size={16} />
+            </a>
+          </motion.div>
+
+        </div>
+      </section>
+
     </main>
   );
 };

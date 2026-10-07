@@ -1,6 +1,6 @@
 {
   "name": "Diane Wolf",
-  "description": "Psychologue clinicienne à Toulouse et en téléconsultation. Accompagnement intégratif pour adultes en cabinet et en visio.",
+  "description": "Psychologue clinicienne à Toulouse et en téléconsultation. Accompagnement intégratif pour adultes en cabinet, en visio et à domicile.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

@@ -6,20 +6,20 @@ const Footer = () => (
       {/* Branding */}
       <div className="flex flex-col text-center md:text-left">
         <span className="text-xl font-serif font-bold">Diane Wolf</span>
-        <p className="opacity-70 text-sm">
-          Psychologue clinicienne à Toulouse • Cabinet, domicile & visio
+        <p className="opacity-85 text-sm">
+          Psychologue clinicienne à Toulouse
         </p>
       </div>
       
       {/* Navigation */}
       <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
-        <Link to="/mentions-legales" className="opacity-80 hover:opacity-100 transition-all">Mentions Légales</Link>
-        <Link to="/politique-de-confidentialite" className="opacity-80 hover:opacity-100 transition-all">Politique de Confidentialité</Link>
-        <Link to="/contact" className="opacity-80 hover:opacity-100 transition-all">Contact</Link>
+        <Link to="/mentions-legales" className="opacity-85 hover:opacity-100 transition-all">Mentions Légales</Link>
+        <Link to="/politique-de-confidentialite" className="opacity-85 hover:opacity-100 transition-all">Politique de Confidentialité</Link>
+        <Link to="/contact" className="opacity-85 hover:opacity-100 transition-all">Contact</Link>
       </div>
       
       {/* Copyright */}
-      <div className="text-sm opacity-60 text-center md:text-right">
+      <div className="text-xs sm:text-sm opacity-80 text-center md:text-right whitespace-nowrap">
         <p>© 2026 Diane Wolf - Psychologue. Tous droits réservés.</p>
       </div>
     </div>

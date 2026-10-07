@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="flex flex-col text-center md:text-left">
         <span className="text-xl font-serif font-bold">Diane Wolf</span>
         <p className="opacity-70 text-sm">
-          Psychologue clinicienne à Toulouse & en ligne
+          Psychologue clinicienne à Toulouse • Cabinet, domicile & visio
         </p>
       </div>
       

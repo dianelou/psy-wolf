@@ -55,7 +55,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legales" element={<LegalNotice />} />
           <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
-          <Route path="/approche" element={<Approach />} />
+          <Route path="/parcours" element={<Approach />} />
           <Route path="/confirmation" element={<BookingConfirmation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

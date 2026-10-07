@@ -15,14 +15,14 @@ const Navbar = () => {
   const navLinks = [
     { to: "/#home", label: "Accueil", isActive: isHome },
     { to: "/#services", label: "Consultation" },
-    { to: "/approche", label: "Approche", isActive: location.pathname === '/approche' },
+    { to: "/parcours", label: "Mon parcours", isActive: location.pathname === '/parcours' || location.pathname === '/approche' },
     { to: "/contact", label: "Contact", isActive: isContact },
   ];
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl transition-all duration-300 border-b border-surface-container-highest/20">
       <div className="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-        <Link to="/#home" onClick={closeMenu} className="text-2xl font-serif italic text-primary">Diane Wolf</Link>
+        <Link to="/#home" onClick={closeMenu} className="text-2xl font-serif italic text-primary">Diane Wolf - Psychologue</Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm">

@@ -15,7 +15,8 @@ import {
   Wallet,
   ReceiptText,
   CalendarX,
-  Check
+  Check,
+  House
 } from 'lucide-react';
 
 const Hero = () => (
@@ -46,7 +47,7 @@ const Hero = () => (
           >
             Réserver un premier échange gratuit
           </a>
-          <Link to="/approche" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
+          <Link to="/parcours" className="flex items-center gap-3 text-secondary font-bold hover:text-primary transition-colors px-4 group">
             <Play className="fill-secondary group-hover:fill-primary transition-colors" size={24} />
             Mon approche et parcours
           </Link>
@@ -200,13 +201,13 @@ const ServicesSection = () => (
             {
               icon: Hourglass,
               title: "Écoute & Temps",
-              desc: "Accueillir votre histoire sans jugement, en favorisant une expression libre et une élaboration profonde.",
+              desc: "Accueillir votre histoire sans jugement, en favorisant une expression libre et une élaboration à votre rythme.",
               color: "secondary"
             },
             {
               icon: Brain,
               title: "TCC & Outils concrets",
-              desc: "Les thérapies cognitivo-comportementales offrent des outils concrets pour mieux comprendre, réguler et soulager certaines difficultés psychologiques.",
+              desc: "Les thérapies cognitivo-comportementales offrent des outils concrets pour mieux comprendre les liens entre pensées, émotions et comportements, et travailler progressivement sur certaines difficultés psychologiques.",
               featured: true
             },
             {
@@ -245,7 +246,7 @@ const ServicesSection = () => (
 );
 
 const PracticalInfoSection = () => (
-  <section id="infos" className="py-24 bg-surface-container-high/30">
+  <section id="infos" className="py-24 bg-surface-container-high">
     <div className="max-w-7xl mx-auto px-8">
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-serif">
@@ -261,12 +262,13 @@ const PracticalInfoSection = () => (
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-serif mb-8 text-on-surface">Cabinet à Toulouse Nord</h3>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[
               { icon: MapPin, text: "2 rue Ernest Renan,\n31200 Toulouse" },
+              { icon: Clock, text: "Jeudi : 9h00 - 19h\nSamedi : 10h00 - 18h00" },
               { icon: Train, text: "Métro Ligne B - Arrêt Trois Cocus (15 minutes à pied)" },
               { icon: Bus, text: "Bus 41 - Arrêt Pradet, Bus L12 - Arrêt Louin" },
-              { icon: Clock, text: "Jeudi : 9h00 - 19h\nSamedi : 10h00 - 18h00" }
+              { icon: House, text: "Consultation à domicile\nSecteur : 10 minutes à vélo autour du métro La Vache" }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4">
                 <item.icon className="text-primary mt-1 shrink-0" size={24} />
@@ -304,7 +306,7 @@ const PracticalInfoSection = () => (
           {
             icon: Wallet,
             title: "RÈGLEMENT",
-            desc: "Les règlements s'effectuent par carte via un lien sécurisé Paypal ou virement bancaire avant chaque séance. Si besoin, les consultations en cabinet peuvent être réglées par chèque ou espèces."
+            desc: "Le règlement s’effectue en fin de consultation par virement bancaire. En cabinet et à domicile, le paiement peut également être effectué par chèque ou en espèces."
           },
           {
             icon: ReceiptText,
@@ -314,7 +316,7 @@ const PracticalInfoSection = () => (
           {
             icon: CalendarX,
             title: "ANNULATION",
-            desc: "Toute annulation effectuée au moins 48 heures à l’avance donnera lieu à un remboursement intégral. Passé ce délai, et en l’absence de motif justifié, 50% du montant de la séance sera retenu."
+            desc: "Toute annulation ou demande de report doit être effectuée au moins 48 heures à l’avance. Passé ce délai, et sauf motif légitime, la séance pourra être due."
           }
         ].map((item, i) => (
           <div key={i} className="flex gap-6">

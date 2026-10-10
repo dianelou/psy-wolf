@@ -265,7 +265,7 @@ const PracticalInfoSection = () => (
           <div className="space-y-6">
             {[
               { icon: MapPin, text: "2 rue Ernest Renan,\n31200 Toulouse" },
-              { icon: Clock, text: "Jeudi : 9h00 - 19h\nSamedi : 10h00 - 18h00" },
+              { icon: Clock, text: "Jeudi : 9h - 19h\nSamedi : 10h - 18h" },
               { icon: Train, text: "Métro Ligne B - Arrêt Trois Cocus (15 minutes à pied)" },
               { icon: Bus, text: "Bus 41 - Arrêt Pradet, Bus L12 - Arrêt Louin" },
               { icon: House, text: "Consultation à domicile\nSecteur : 10 minutes à vélo autour du métro La Vache" }

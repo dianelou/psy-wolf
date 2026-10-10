@@ -270,8 +270,8 @@ const Contact = () => {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Horaires</p>
                     <p className="font-sans text-neutral-600 leading-relaxed">
-                      Jeudi : 09:00 — 19:00<br />
-                      Samedi : 10:00 — 18:00
+                      Jeudi : 09h — 19h<br />
+                      Samedi : 10h — 18h
                     </p>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ const Contact = () => {
                       <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Secteur d'intervention</p>
                       <p className="font-sans text-neutral-600 text-sm">
                         10 minutes à vélo ou en transports en commun autour du métro La Vache<br />
-                        Borderouge, Barrière de Paris, Minimes, Izards, etc.
+                        (Borderouge, Barrière de Paris, Minimes, Izards, etc.)
                       </p>
                     </div>
                   </div>

@@ -7,9 +7,7 @@ import {
   ShieldCheck, 
   Download, 
   Calendar, 
-  User, 
   ArrowRight, 
-  Camera,
   Stethoscope,
   Brain,
   HeartHandshake,
@@ -17,6 +15,7 @@ import {
   Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { LogoFeuille } from '../components/LogoFeuille';
 
 const Approach: React.FC = () => {
   return (
@@ -40,7 +39,7 @@ const Approach: React.FC = () => {
               Diane Wolf
             </h1>
             <p className="text-xl md:text-2xl text-primary font-serif italic mb-6">
-              Psychologue clinicienne • gérontologie, neuropsychologie
+              Psychologue clinicienne · Gérontologie - Neuropsychologie
             </p>
             
             <p className="text-on-surface-variant font-sans text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-light">
@@ -67,7 +66,7 @@ const Approach: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Colonne droite : Cadre Photo de profil */}
+          {/* Colonne droite : Cadre Emblème & Logo Diane Wolf */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -75,19 +74,18 @@ const Approach: React.FC = () => {
             className="lg:col-span-5 relative"
           >
             <div className="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-xl bg-surface-container-low ring-1 ring-primary/5 flex flex-col items-center justify-center p-8 text-center">
-              <div className="w-28 h-28 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center mb-5 text-primary">
-                <User size={52} className="text-primary/70" />
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-surface-container-lowest shadow-lg shadow-secondary/5 flex items-center justify-center mb-6 p-6 border border-secondary/15 transition-transform duration-500 hover:scale-105">
+                <LogoFeuille className="w-full h-full" />
               </div>
-              <h3 className="font-serif text-2xl text-on-surface font-semibold mb-1">
+              <h3 className="font-serif text-2xl md:text-3xl text-on-surface font-semibold mb-1.5">
                 Diane Wolf
               </h3>
-              <p className="text-xs uppercase tracking-widest text-primary font-bold mb-5">
+              <p className="text-xs uppercase tracking-widest text-primary font-bold mb-2">
                 Psychologue clinicienne
               </p>
-              <div className="text-xs text-neutral-600 font-sans leading-relaxed bg-surface-container-lowest/90 backdrop-blur-sm px-4 py-2.5 rounded-xl flex items-center gap-2 border border-primary/10 shadow-sm">
-                <Camera size={15} className="shrink-0 text-primary" />
-                Espace réservé pour votre photo de profil
-              </div>
+              <p className="text-xs text-on-surface-variant font-sans tracking-wide">
+                Cabinet de consultation · Toulouse
+              </p>
             </div>
 
             {/* Macaron citation */}
@@ -112,7 +110,7 @@ const Approach: React.FC = () => {
       <section className="bg-surface-container-low py-24">
         <div className="max-w-7xl mx-auto px-8">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             
             {/* ======================================================== */}
             {/* COLONNE GAUCHE : MA FORMATION (Cadre style Consultation)  */}
@@ -122,7 +120,7 @@ const Approach: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(74,100,83,0.06)] ring-1 ring-secondary/15 flex flex-col relative overflow-hidden h-full"
+              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(74,100,83,0.06)] ring-1 ring-secondary/15 flex flex-col relative overflow-hidden"
             >
               {/* Filigrane discret en arrière-plan */}
               <div className="absolute top-10 right-10 text-secondary/10 pointer-events-none">
@@ -225,7 +223,7 @@ const Approach: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(137,76,42,0.06)] ring-1 ring-primary/5 flex flex-col relative overflow-hidden h-full"
+              className="bg-background p-8 md:p-12 rounded-[2rem] shadow-[0_8px_40px_rgba(137,76,42,0.06)] ring-1 ring-primary/5 flex flex-col relative overflow-hidden"
             >
               {/* Filigrane discret en arrière-plan */}
               <div className="absolute top-10 right-10 text-primary/10 pointer-events-none">
@@ -239,7 +237,7 @@ const Approach: React.FC = () => {
               <div className="h-1 w-10 rounded-full bg-primary mb-8" />
 
               {/* Liste des expériences professionnelles */}
-              <div className="space-y-6 flex-grow">
+              <div className="space-y-6">
                 
                 {/* 1. Psychologue clinicienne */}
                 <div className="border-l-2 border-primary/20 pl-4 py-0.5">
@@ -293,6 +291,19 @@ const Approach: React.FC = () => {
                   </p>
                   <p className="text-sm text-on-surface-variant leading-relaxed">
                     Accompagnement des élèves-ingénieurs dans la construction de leur projet professionnel et le développement de leurs compétences.
+                  </p>
+                </div>
+
+                {/* 5. Ingénieure · Cheffe de projet */}
+                <div className="border-l-2 border-primary/20 pl-4 py-0.5">
+                  <h3 className="font-serif font-bold text-lg text-on-surface mb-1">
+                    Ingénieure · Cheffe de projet
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    2012 – 2019, 2023 – 2025
+                  </p>
+                  <p className="text-sm text-on-surface-variant leading-relaxed">
+                    Expériences en entreprises et engagement comme représentante du personnel, ayant nourri ma réflexion sur la santé au travail, les situations d’épuisement professionnel et les transitions professionnelles.
                   </p>
                 </div>
 

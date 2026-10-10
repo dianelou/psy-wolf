@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, Calendar, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import { LogoFeuille } from './LogoFeuille';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl transition-all duration-300 border-b border-surface-container-highest/20">
       <div className="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-        <Link to="/#home" onClick={closeMenu} className="text-2xl font-serif italic text-primary">Diane Wolf - Psychologue</Link>
+        <Link to="/#home" onClick={closeMenu} className="text-xl md:text-2xl font-serif italic text-primary flex items-center gap-3 group">
+          <span className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 inline-flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+            <LogoFeuille className="w-full h-full object-contain" />
+          </span>
+          <span>Diane Wolf - Psychologue</span>
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm">

@@ -270,7 +270,7 @@ const Contact = () => {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest font-bold text-neutral-400 mb-1">Horaires</p>
                     <p className="font-sans text-neutral-600 leading-relaxed">
-                      Jeudi : 09h — 19h<br />
+                      Lundi : 9h — 19h<br />
                       Samedi : 10h — 18h
                     </p>
                   </div>

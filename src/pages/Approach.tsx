@@ -15,7 +15,6 @@ import {
   Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { LogoFeuille } from '../components/LogoFeuille';
 
 const Approach: React.FC = () => {
   return (
@@ -66,26 +65,19 @@ const Approach: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Colonne droite : Cadre Emblème & Logo Diane Wolf */}
+          {/* Colonne droite : Photo de profil Diane Wolf */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden shadow-xl bg-surface-container-low ring-1 ring-primary/5 flex flex-col items-center justify-center p-8 text-center">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-surface-container-lowest shadow-lg shadow-secondary/5 flex items-center justify-center mb-6 p-6 border border-secondary/15 transition-transform duration-500 hover:scale-105">
-                <LogoFeuille className="w-full h-full" />
-              </div>
-              <h3 className="font-serif text-2xl md:text-3xl text-on-surface font-semibold mb-1.5">
-                Diane Wolf
-              </h3>
-              <p className="text-xs uppercase tracking-widest text-primary font-bold mb-2">
-                Psychologue clinicienne
-              </p>
-              <p className="text-xs text-on-surface-variant font-sans tracking-wide">
-                Cabinet de consultation · Toulouse
-              </p>
+            <div className="relative w-full aspect-[3/4] md:aspect-[4/5] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-surface-container-low ring-1 ring-primary/10 group">
+              <img 
+                src="/diane-wolf-portrait.jpg" 
+                alt="Diane Wolf - Psychologue clinicienne à Toulouse" 
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
+              />
             </div>
 
             {/* Macaron citation */}
@@ -93,7 +85,7 @@ const Approach: React.FC = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-secondary text-surface-container-lowest p-6 rounded-2xl max-w-[260px] -rotate-2 shadow-xl hidden sm:block"
+              className="absolute -bottom-6 -left-6 bg-secondary text-surface-container-lowest p-6 rounded-2xl max-w-[260px] -rotate-2 shadow-xl hidden sm:block ring-1 ring-white/10"
             >
               <Sparkles className="text-2xl mb-2 text-surface-container-lowest" />
               <p className="text-xs font-medium leading-relaxed italic opacity-95">
